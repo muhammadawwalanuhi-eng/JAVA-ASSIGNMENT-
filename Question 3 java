@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Q3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int c, q;
+
+        do {
+            System.out.println("1.Individual 2.Retailer 3.Exit");
+            c = sc.nextInt();
+
+            if (c == 1) {
+                q = sc.nextInt();
+                System.out.println(q >= 12 ? "30%" : "0%");
+            } else if (c == 2) {
+                q = sc.nextInt();
+                if (q < 12)
+                    System.out.println("15%");
+                else if (q <= 48)
+                    System.out.println("30%");
+                else if (q <= 84)
+                    System.out.println("40%");
+                else
+                    System.out.println("50%");
+            }
+        } while (c != 3);
+    }
+}
